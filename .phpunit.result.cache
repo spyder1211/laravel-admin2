@@ -1,0 +1,1 @@
+{"version":1,"defects":{"AuthTest::testLoginPage":8,"AuthTest::testVisitWithoutLogin":8,"AuthTest::testLogin":8,"AuthTest::testLogout":8},"times":{"AuthTest::testLoginPage":0.017}}
