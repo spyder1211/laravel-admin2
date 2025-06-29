@@ -63,6 +63,13 @@ return [
         'namespace' => 'App\\Admin\\Controllers',
 
         'middleware' => ['web', 'admin'],
+
+        // Laravel 11 API integration support
+        'api' => [
+            'enable' => env('ADMIN_API_ENABLE', false),
+            'prefix' => env('ADMIN_API_PREFIX', 'admin-api'),
+            'middleware' => ['api', 'admin.auth:sanctum'],
+        ],
     ],
 
     /*
