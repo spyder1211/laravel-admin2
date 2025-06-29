@@ -1,1 +1,1 @@
-{"version":1,"defects":{"AuthTest::testLoginPage":8,"AuthTest::testVisitWithoutLogin":8,"AuthTest::testLogin":8,"AuthTest::testLogout":8},"times":{"AuthTest::testLoginPage":0.017}}
+{"version":1,"defects":{"AuthTest::testLoginPage":5,"AuthTest::testVisitWithoutLogin":5,"AuthTest::testLogin":5,"AuthTest::testLogout":5,"IndexTest::testIndex":7},"times":{"AuthTest::testLoginPage":0.053,"AuthTest::testVisitWithoutLogin":0.007,"AuthTest::testLogin":0.006,"AuthTest::testLogout":0.004,"IndexTest::testIndex":0.094}}

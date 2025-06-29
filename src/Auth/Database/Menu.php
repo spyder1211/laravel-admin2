@@ -6,6 +6,7 @@ use Encore\Admin\Traits\DefaultDatetimeFormat;
 use Encore\Admin\Traits\ModelTree;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\DB;
 class Menu extends Model
 {
     use DefaultDatetimeFormat;
+    use HasFactory;
     use ModelTree {
         ModelTree::boot as treeBoot;
     }

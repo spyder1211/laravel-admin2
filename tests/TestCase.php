@@ -75,7 +75,7 @@ class TestCase extends BaseTestCase
 
         require __DIR__.'/routes.php';
 
-        // require __DIR__.'/seeds/factory.php'; // Laravel 11では Model Factories の使用方法が変更されたため一時的にコメントアウト
+        // Laravel 11の新しいFactory構文を使用
     }
 
     protected function tearDown(): void
