@@ -74,6 +74,36 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Laravel-admin asset settings
+    |--------------------------------------------------------------------------
+    |
+    | Asset management configuration for modern build tools and legacy support.
+    | Laravel 11 Vite integration with backward compatibility.
+    |
+    */
+    'assets' => [
+        // Enable Vite for modern asset compilation (requires npm run build)
+        'use_vite' => env('ADMIN_USE_VITE', false),
+        
+        // Vite build output directory (relative to public/)
+        'vite_build_path' => env('ADMIN_VITE_BUILD_PATH', 'build'),
+        
+        // Legacy asset fallback (maintains backward compatibility)
+        'legacy_fallback' => env('ADMIN_LEGACY_FALLBACK', true),
+        
+        // Asset versioning for cache busting
+        'version' => env('ADMIN_ASSET_VERSION', '1.0.0'),
+        
+        // CDN configuration for external libraries
+        'cdn' => [
+            'enable' => env('ADMIN_CDN_ENABLE', false),
+            'jquery' => 'https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js',
+            'bootstrap' => 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css',
+        ],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Laravel-admin install directory
     |--------------------------------------------------------------------------
     |

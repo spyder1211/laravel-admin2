@@ -50,6 +50,17 @@ trait HasAssets
     public static $manifestData = [];
 
     /**
+     * Check if Vite assets should be used
+     *
+     * @return bool
+     */
+    public static function useVite()
+    {
+        return config('admin.assets.use_vite', false) && 
+               file_exists(public_path(config('admin.assets.vite_build_path', 'build') . '/manifest.json'));
+    }
+
+    /**
      * @var array
      */
     public static $min = [
