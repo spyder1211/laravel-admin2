@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(php:*)",
+      "Bash(composer:*)",
+      "Bash(mkdir:*)",
+      "Bash(pkill:*)",
+      "Bash(curl:*)"
+    ],
+    "deny": []
+  }
+}
