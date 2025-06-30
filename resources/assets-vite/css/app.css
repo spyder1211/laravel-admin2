@@ -10,10 +10,12 @@
 @import './base/reset.css';
 
 /* Core admin styles - modernized versions */
-@import './components/grid.css';
-@import './components/form.css';
-@import './components/navigation.css';
-@import './components/widgets.css';
+@import './components/responsive-grid.css';
+@import './components/responsive-table.css';
+@import './components/responsive-navigation.css';
+@import './components/responsive-forms.css';
+@import './components/touch-interface.css';
+@import './components/accessibility.css';
 
 /* Legacy compatibility layer */
 @import './legacy/adminlte-compat.css';
