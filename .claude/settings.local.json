@@ -6,7 +6,8 @@
       "Bash(composer:*)",
       "Bash(mkdir:*)",
       "Bash(pkill:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(find:*)"
     ],
     "deny": []
   }
