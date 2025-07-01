@@ -38,7 +38,11 @@
     "vite": "^5.0.0"
   },
   "dependencies": {
-    "modern-normalize": "^2.0.0"
+    "modern-normalize": "^2.0.0",
+    "bootstrap": "^5.3.2",
+    "@popperjs/core": "^2.11.8",
+    "admin-lte": "^4.0.0-beta.2",
+    "@fortawesome/fontawesome-free": "^6.5.1"
   },
   "browserslist": [
     "> 1%",

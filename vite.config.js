@@ -1,13 +1,17 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import { resolve } from 'path';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
 
 export default defineConfig({
     plugins: [
         laravel({
             input: [
                 'resources/assets-vite/css/app.css',
-                'resources/assets-vite/js/app.js'
+                'resources/assets-vite/css/adminlte4.css',
+                'resources/assets-vite/js/app.js',
+                'resources/assets-vite/js/adminlte4.js'
             ],
             refresh: true,
             publicDirectory: 'public/vendor/laravel-admin',
@@ -95,7 +99,7 @@ export default defineConfig({
         postcss: {
             plugins: [
                 // Autoprefixer for vendor prefixes
-                require('autoprefixer')({
+                autoprefixer({
                     overrideBrowserslist: [
                         '> 1%',
                         'last 2 versions',
@@ -106,7 +110,7 @@ export default defineConfig({
                 
                 // CSS Nano for production minification
                 ...(process.env.NODE_ENV === 'production' ? [
-                    require('cssnano')({
+                    cssnano({
                         preset: ['default', {
                             discardComments: {
                                 removeAll: true,

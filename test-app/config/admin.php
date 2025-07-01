@@ -74,25 +74,53 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel-admin asset settings
+    | Laravel-admin UI Framework Configuration
     |--------------------------------------------------------------------------
     |
-    | Asset management configuration for modern build tools and legacy support.
-    | Laravel 11 Vite integration with backward compatibility.
+    | UI framework and theme configuration for AdminLTE 4 + Bootstrap 5.
+    | Includes asset management, theming, and modern build tools.
+    |
+    */
+    
+    // UI Framework Settings
+    'ui_framework' => env('ADMIN_UI_FRAMEWORK', 'adminlte4'), // adminlte4, adminlte3, custom
+    
+    // Theme Configuration
+    'theme' => env('ADMIN_THEME', 'light'), // light, dark, auto
+    'theme_color' => env('ADMIN_THEME_COLOR', 'blue'), // blue, green, red, purple, etc.
+    
+    // Layout Configuration
+    'layout' => [
+        'sidebar_mini' => env('ADMIN_SIDEBAR_MINI', false),
+        'sidebar_collapse' => env('ADMIN_SIDEBAR_COLLAPSE', false),
+        'navbar_fixed' => env('ADMIN_NAVBAR_FIXED', true),
+        'footer_fixed' => env('ADMIN_FOOTER_FIXED', false),
+        'sidebar_dark' => env('ADMIN_SIDEBAR_DARK', true),
+    ],
+    
+    // Vite Integration (AdminLTE 4 + Bootstrap 5)
+    'vite' => [
+        'enabled' => env('ADMIN_VITE_ENABLED', false),
+        'hot_reload' => env('ADMIN_VITE_HOT_RELOAD', env('APP_DEBUG', false)),
+        'build_path' => env('ADMIN_VITE_BUILD_PATH', 'build'),
+        'manifest' => env('ADMIN_VITE_MANIFEST', 'manifest.json'),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Laravel-admin asset settings (Legacy Support)
+    |--------------------------------------------------------------------------
+    |
+    | Asset management configuration for legacy support and CDN fallbacks.
+    | Maintains backward compatibility with existing installations.
     |
     */
     'assets' => [
-        // Enable Vite for modern asset compilation (requires npm run build)
-        'use_vite' => env('ADMIN_USE_VITE', false),
-        
-        // Vite build output directory (relative to public/)
-        'vite_build_path' => env('ADMIN_VITE_BUILD_PATH', 'build'),
-        
         // Legacy asset fallback (maintains backward compatibility)
         'legacy_fallback' => env('ADMIN_LEGACY_FALLBACK', true),
         
         // Asset versioning for cache busting
-        'version' => env('ADMIN_ASSET_VERSION', '1.0.0'),
+        'version' => env('ADMIN_ASSET_VERSION', '2.0.0'),
         
         // CDN configuration for external libraries
         'cdn' => [

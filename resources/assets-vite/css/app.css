@@ -17,9 +17,7 @@
 @import './components/touch-interface.css';
 @import './components/accessibility.css';
 
-/* Legacy compatibility layer */
-@import './legacy/adminlte-compat.css';
-@import './legacy/bootstrap-compat.css';
+/* Legacy compatibility handled by adminlte4.css */
 
 /* Modern admin theme */
 :root {
